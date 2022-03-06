@@ -5,11 +5,9 @@ const PORT = process.env.PORT || 8000
 
 const csgoRouter = require("./src/routers/csgoRouter")
 const generalRouter = require("./src/routers/marketRouter")
-const checkoutRouter = require("./src/routers/checkoutRouter")
 
 app.use(express.json())
 
-app.use("/checkout", checkoutRouter)
 app.use("/csgo", csgoRouter)
 app.use("/market", generalRouter)
 
